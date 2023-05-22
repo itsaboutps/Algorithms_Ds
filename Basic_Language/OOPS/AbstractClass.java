@@ -1,8 +1,5 @@
 package Basic_Language.OOPS;
 
-// public class AbstractClass {
-    
-// }
 public class AbstractClass {
     public static void main(String[] args) {
         Car car = new Car("Honda", "Civic", 2020);
@@ -20,7 +17,7 @@ public class AbstractClass {
 
 
 // Abstract class to define a common base for vehicles
-abstract class Vehicle {
+abstract class Vehicle implements ICar {
     private String make;
     private String model;
     private int year;
@@ -32,10 +29,11 @@ abstract class Vehicle {
     }
 
     // Abstract method to start the vehicle
+    //!abstract method does not provide method logic
     public abstract void start();
 
     // Concrete method to stop the vehicle
-    public void stop() {
+    public final void stop() {
         System.out.println("Vehicle stopped.");
     }
 
@@ -62,5 +60,19 @@ class Car extends Vehicle {
     public void start() {
         System.out.println("Car started.");
     }
+    // public void stop(){
+
+    @Override
+    public void letsStart() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'letsStart'");
+    }
+
+    @Override
+    public void letsStop() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'letsStop'");
+    }
+        
 }
 
