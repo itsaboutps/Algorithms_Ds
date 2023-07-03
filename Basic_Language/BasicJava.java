@@ -4,7 +4,7 @@ package Basic_Language;
 
 class BasicJava{
     public static void main(String[] args) {
-        int x ="heelo";
+//        int x ="heelo";
         System.out.println("Hello");
 		java.util.ArrayList l = new java.util.ArrayList();
 
